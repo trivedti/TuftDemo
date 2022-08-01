@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>SynovergeAutomation</groupId>
-  <artifactId>TuftCucumberFramework</artifactId>
+  <artifactId>TuftCucumberFrameworks</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>TuftCucumberFramework</name>
+  <name>TuftCucumberFrameworks</name>
   <url>http://www.example.com</url>
 
   <properties>
