@@ -129,6 +129,9 @@
         <parallel>methods</parallel>
         <useUnlimitedThreads>true</useUnlimitedThreads>
         </configuration>-->
+        <configuration>
+     <testFailureIgnore>true</testFailureIgnore>
+     </configuration>
       </plugin>
     </plugins>
   </build>
