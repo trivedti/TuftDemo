@@ -27,4 +27,4 @@ And close browser
 
 Examples:
 |Email|Password|Popup|FirstName|LastName|EmailAddress|MobileNumber|Address|EFullName|ETelephone|VPractice|Notes|
-|test22.2multi@yopmail.com|^FsnSYE!xOFX|Add or Edit Client|raj|Rovek|raj@synoverge.com|7880061800|Washington, DC, USA|John Rovek|7880061800|Test|Test|
+|test22.2multi@yopmail.com|12345678|Add or Edit Client|raj|Rovek|raj@synoverge.com|7880061800|Washington, DC, USA|John Rovek|7880061800|Test|Test|
