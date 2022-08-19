@@ -7,11 +7,12 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions
 
 (
 features="src/test/java/features/ClientManagement.feature",
+//features="src/test/java/features",
 glue="stepDefinitions",monochrome=true,tags="@RegressionTest",
 //glue="stepDefinitions",stepNotifications=true,tags="@SmokeTest or @RegressionTest",
 //glue="stepDefinitions",stepNotifications=true,tags="@SmokeTest and @RegressionTest",
