@@ -99,16 +99,17 @@ public class ClientManagementPage extends GenericUtilsDummy {
 	public void click_on_login() throws Throwable { 
 		clickOnElement(String.format(locators.getKey("LoginButton")));
 		log.info("STEP:Click on Login Button Successfully" + "LoginButton");
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 	}
 
-	public void user_is_on_Dahboard_page()  {
+	public void user_is_on_Dahboard_page() throws InterruptedException  {
 		boolean test = isElementDisplay(locators.getKey("AssertDashboardMenu"));
 		if (test) {
 			log.info("STEP: " + "AssertDashboardMenu" + " is present on login screen");
 		} else {
 			log.info("STEP: " + "AssertDashboardMenu" + " is not present on login screen");
 		}
+		Thread.sleep(7000);
 
 	}
 		
