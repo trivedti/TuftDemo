@@ -83,6 +83,7 @@ public void user_enters_password_as(String password) throws Throwable {
 public void click_on_login() throws Throwable {
 	ClientManagementPage clientPage=testContextSetup.pageObjectManager.getClientRegistrationPage();
 	clientPage.click_on_login();
+	Thread.sleep(6000);
 }
 /*
  * @Then("^User moves to Dashboard page and verify present text as (.+) in to present element$"
@@ -109,18 +110,21 @@ public void click_on_login() throws Throwable {
 public void user_click_on_add_client_menu() throws Throwable {
 	ClientManagementPage clientPage=testContextSetup.pageObjectManager.getClientRegistrationPage();
 	clientPage.click_on_AddClient();
+	Thread.sleep(5000);
 }
 
 @And("^User click on Add new client button$")
 public void user_click_on_add_new_client_button() throws Throwable {
 	ClientManagementPage clientPage=testContextSetup.pageObjectManager.getClientRegistrationPage();
 	clientPage.click_on_AddNewClient();
+	Thread.sleep(1000);
 }
 
 @Then("^Add or edit client pop up is displayed as (.+)$")
 public void add_or_edit_client_pop_up_is_displayed_as(String AddClientpopup) throws Throwable {
 	ClientManagementPage clientPage=testContextSetup.pageObjectManager.getClientRegistrationPage();
 	clientPage.user_is_on_AddEditClient_page();
+	Thread.sleep(1000);
 }
 
 @And("^User enters Firs Name as (.+) in to personal details$")
@@ -182,6 +186,7 @@ public void user_enters_notes_as_in_to_bottom_of_the_page(String notes) throws T
 public void click_on_save_change_button() throws Throwable {
 	ClientManagementPage clientPage=testContextSetup.pageObjectManager.getClientRegistrationPage();
 	clientPage.clickSaveChangeButton();
+	Thread.sleep(5000);
 }
     @Then("^newly added client is saved$")
     public void newly_added_client_is_saved(String ClientNameForSearch) throws Throwable {
@@ -191,7 +196,9 @@ public void click_on_save_change_button() throws Throwable {
     @And("^close browser$")
     public void close_browser() throws Throwable {
     	ClientManagementPage clientPage=testContextSetup.pageObjectManager.getClientRegistrationPage();
-    	clientPage.terminateBrowser();
+    	genericUtils=new GenericUtilsDummy();
+		genericUtils.terminateBrowser();
+    	
     }
 }
 

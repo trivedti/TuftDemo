@@ -2,7 +2,7 @@ package cucumber.app.enums;
 
 public enum ClientRegistrationPageEnum {
 	timirtrivedisynovergecom("timir.trivedi@synoverge.com"),
-	Drishtrivedi("Drish trivedi"),
+	timirtrivedi("Timir trivedi"),
 	trivedi("trivedi"),
 	PA("1");
 	

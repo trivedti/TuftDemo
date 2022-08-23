@@ -1,11 +1,13 @@
 package utils;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -133,8 +135,6 @@ public  class GenericUtilsDummy extends TestBase{
 		log.debug("STEP: click on element " + getLocatorValue(locator));
 	}
 	
-	
-	
 	public boolean isElementDisplayed(String locator) {
 		WebElement element = null;
 		boolean elementDisplay;
@@ -152,6 +152,8 @@ public  class GenericUtilsDummy extends TestBase{
 		}
 		return elementDisplay;
 	}
+	
+
 	public boolean isElementDisplay(String locator) {
 		WebElement element = null;
 		boolean elementDisplay;
@@ -178,6 +180,7 @@ public  class GenericUtilsDummy extends TestBase{
 	}
 	
 	
+	
 	public void wait(int miliseconds) {
 		try {
 			Thread.sleep(miliseconds);
@@ -186,11 +189,19 @@ public  class GenericUtilsDummy extends TestBase{
 		}
 	}
 	public String enterText(String locator, String strMessage) {
+		//getWait().until(ExpectedConditions.elementToBeClickable(getElement(locator))).click();
+		getWait().until(ExpectedConditions.visibilityOf(getElement(locator))).sendKeys(Keys.TAB);
 		getElement(locator).sendKeys(strMessage);
 		log.debug("STEP: " + strMessage + " is set inside element");
+
+		/*
+		 * getElement(locator).sendKeys(Keys.TAB); log.debug("STEP: " + strMessage +
+		 * " is set tab from element");
+		 */
+
 		return strMessage;
 	}
-	public void actionEnter() {
+	public void actionEnter(String locator) {
 		Actions actions = new Actions(getDriver());
 		try {
 			actions.sendKeys(Keys.ENTER).build().perform();
@@ -198,6 +209,9 @@ public  class GenericUtilsDummy extends TestBase{
 			Assert.fail("Issue While Enter tab", e.getCause());
 		}
 	}
+	
+	
+	
 	public void EnterWithActionDownEnter(String locator, String strMessage) {
 		getElement(locator).sendKeys(strMessage);
 		Actions actions = new Actions(getDriver());
@@ -211,6 +225,20 @@ public  class GenericUtilsDummy extends TestBase{
 		}
 	}
 	
+	public void EnterOnButton(String locator) {
+		getWait().until(ExpectedConditions.elementToBeClickable(getElement(locator)));
+		Actions actions = new Actions(getDriver());
+		//		
+		try {
+			
+			//actions.sendKeys(Keys.DOWN).build().perform();
+			actions.sendKeys(Keys.ENTER).build().perform();
+
+		} catch (Exception e) {
+			Assert.fail("Issue While Enter tab", e.getCause());
+		}
+	}
+		
 	public void refreshPage() {
 		try {
 			getDriver().navigate().refresh();
@@ -219,6 +247,7 @@ public  class GenericUtilsDummy extends TestBase{
 		}
 	}
 	public  void terminateBrowser() {
+		getDriver().close();
 		getDriver().quit();
 		log.debug("STEP - Browser Quit");
 	}

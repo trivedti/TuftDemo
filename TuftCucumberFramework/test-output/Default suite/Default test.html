@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 01 16:10:04 IST 2022</td>
+<td>Started on:</td><td>Mon Aug 22 19:27:04 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29455 ms)</td>
+<tr><td>Total time:</td><td>29 seconds (29460 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,9 +76,64 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='cucumberOptions.TestngTestRunnerTest.runScenario()'><b>runScenario</b><br>Test class: cucumberOptions.TestngTestRunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Login with valid credentials and register client", "Optional[Client Registration]"</td>
-<td></td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (631, 588)
+  (Session info: chrome=104.0.5112.81)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;SVT-LAPTOP-97&apos;, ip: &apos;192.168.2.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5bb2829dd7bacd2376496b38d9182afa, clickElement {id=03034944-9580-4d2b-8a5c-d3874949ec57}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\trivetim\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50889}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50889/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (5bb2829dd7bacd2376496b38d9182afa)] -&gt; xpath: //input[@id=&apos;vet-name&apos;]]
+Session ID: 5bb2829dd7bacd2376496b38d9182afa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at utils.GenericUtilsDummy.enterText(GenericUtilsDummy.java:189)
+	at pageObjects.ClientManagementPage.PracticName(ClientManagementPage.java:200)
+	at stepDefinitions.ClientManagementPageStepDefinition.user_enters_practice_name_as_in_to_veterinary_practice_details(ClientManagementPageStepDefinition.java:175)
+	at ?.User enters Practice Name as Test in to Veterinary Practice details(file:///D:/SynovergeAutomation/DemoTuft/TuftDemo/TuftCucumberFramework/src/test/java/features/ClientManagement.feature:22)
+</pre></div><a href='#' onClick='toggleBox("stack-trace866203012", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace866203012'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (631, 588)
+  (Session info: chrome=104.0.5112.81)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;SVT-LAPTOP-97&apos;, ip: &apos;192.168.2.231&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5bb2829dd7bacd2376496b38d9182afa, clickElement {id=03034944-9580-4d2b-8a5c-d3874949ec57}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\trivetim\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50889}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50889/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (5bb2829dd7bacd2376496b38d9182afa)] -&gt; xpath: //input[@id=&apos;vet-name&apos;]]
+Session ID: 5bb2829dd7bacd2376496b38d9182afa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at utils.GenericUtilsDummy.enterText(GenericUtilsDummy.java:189)
+	at pageObjects.ClientManagementPage.PracticName(ClientManagementPage.java:200)
+	at stepDefinitions.ClientManagementPageStepDefinition.user_enters_practice_name_as_in_to_veterinary_practice_details(ClientManagementPageStepDefinition.java:175)
+	at ?.User enters Practice Name as Test in to Veterinary Practice details(file:///D:/SynovergeAutomation/DemoTuft/TuftDemo/TuftCucumberFramework/src/test/java/features/ClientManagement.feature:22)
+</pre></div></td>
 <td>28</td>
-<td>cucumberOptions.TestngTestRunnerTest@d86a6f</td></tr>
+<td>cucumberOptions.TestngTestRunnerTest@38cee291</td></tr>
 </table><p>
 </body>
 </html>

@@ -11,6 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import cucumber.app.constants.ApplicationConstants;
 import cucumber.app.enums.ClientRegistrationPageEnum;
 import cucumber.app.enums.FileNames;
 
@@ -99,7 +100,7 @@ public class ClientManagementPage extends GenericUtilsDummy {
 	public void click_on_login() throws Throwable { 
 		clickOnElement(String.format(locators.getKey("LoginButton")));
 		log.info("STEP:Click on Login Button Successfully" + "LoginButton");
-		Thread.sleep(7000);
+		
 	}
 
 	public void user_is_on_Dahboard_page() throws InterruptedException  {
@@ -109,7 +110,7 @@ public class ClientManagementPage extends GenericUtilsDummy {
 		} else {
 			log.info("STEP: " + "AssertDashboardMenu" + " is not present on login screen");
 		}
-		Thread.sleep(7000);
+		
 
 	}
 		
@@ -117,14 +118,14 @@ public class ClientManagementPage extends GenericUtilsDummy {
 	public void click_on_AddClient() throws Throwable {
 		clickOnElement(String.format(locators.getKey("ClickAddClientmenu")));
 		log.info("STEP:Click on Add Client Menu Successfully" + "ClickAddClientmenu");
-		Thread.sleep(4000);
+		
 
 	}
 
 	public void click_on_AddNewClient() throws Throwable {
 		clickOnElement(String.format(locators.getKey("AddClientButton")));
 		log.info("STEP:Click on Add Client Button Successfully" + "AddClientButton");
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 
 	}
 
@@ -180,6 +181,7 @@ public class ClientManagementPage extends GenericUtilsDummy {
 
 	public void Emergency_FullName(String EmergencyFullName) throws InterruptedException {
 		String EnterFullNameTextBox = String.format(locators.getKey("EnterClientEmergency"), EmergencyFullName);
+		//isElementDisplayed(EnterFullNameTextBox);
 		enterText(EnterFullNameTextBox, EmergencyFullName);
 		log.info("STEP:Entered User FirstName Successfully" + EmergencyFullName);
 		//Thread.sleep(5000);
@@ -210,10 +212,12 @@ public class ClientManagementPage extends GenericUtilsDummy {
 	}
 
 	public void clickSaveChangeButton() throws Throwable {
-		clickOnElement(String.format(locators.getKey("ClickOnSaveChanges")));
+		EnterOnButton(String.format(locators.getKey("ClickOnSaveChanges")));
+	
+
 		log.info("STEP:Click on Add Client Save Button Successfully" + "ClickOnSaveChanges");
 
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 
 	}
 
@@ -221,14 +225,16 @@ public class ClientManagementPage extends GenericUtilsDummy {
 		String SearchTextBox = String.format(locators.getKey("SearchClientText"), SearchClient);
 		enterText(SearchTextBox, SearchClient);
 		log.info("STEP:Entered Searched Successfully" + SearchClient);
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 
 	}
 	
 
-	public void close_browser() throws Throwable {
-
-		terminateBrowser();
-		
-	}
+	
+	  public void close_browser() throws Throwable {
+	  
+	  terminateBrowser();
+	  
+	  }
+	 
 }
